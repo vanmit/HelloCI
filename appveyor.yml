@@ -5,6 +5,7 @@ branches:
     - project/travis
 environment:
   matrix:
+<<<<<<< HEAD
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
     platform: x64
     qt: 5.12
@@ -13,6 +14,16 @@ environment:
     platform: x86
     qt: 5.12
     releaseName: HelloCI_qt512_vs2017_x86
+=======
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+    platform: x64
+    qt: 5.12
+    releaseName: HelloCI_qt512_vs2015_x64
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    platform: x64
+    qt: 5.12
+    releaseName: HelloCI_qt512_vs2017_x64
+>>>>>>> 65be260de9b620610e0c3ad0b9e60cf1ae130b50
 before_build:
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2017" set msvc=msvc2017
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2017" set vs=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build
